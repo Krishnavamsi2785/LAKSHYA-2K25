@@ -856,31 +856,31 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 .team-mem1{
-  background-image: url("../img/VIJAY\ CHANDRA.jpg");
+  background-image: url("../img/president.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .team-mem2{
-  background-image: url("../img/t2.jpg");
+  background-image: url("../img/vice.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .team-mem3{
-  background-image: url("../img/me.jpg");
+  background-image: url("../img/secratery.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .team-mem4{
-  background-image: url("../img/t10.jpg");
+  background-image: url("../img/treasury.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .team-mem5{
-  background-image: url("../img/t6.jpg");
+  background-image: url("../img/me.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -1252,7 +1252,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 
-
+}
 .tim{
   display: flex;
   flex-direction: row;
@@ -1271,6 +1271,4 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: block;
   font-size: 4.5rem;
 }
-
-
 
