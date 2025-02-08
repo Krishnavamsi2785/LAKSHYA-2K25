@@ -336,133 +336,56 @@ span {
 .wrapper {
   position: absolute;
   left: 50%;
-  top: 55%;
-  perspective: 2500px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
   z-index: 1;
 }
 
 .box-area {
   position: relative;
+  width: 260px;
+  height: 260px;
   transform-style: preserve-3d;
-  animation-name: rotate;
-  animation-duration: 10s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation: rotateCube 10s infinite linear;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  16% {
-    transform: rotateY(-90deg);
-  }
-  33% {
-    transform: rotateY(-90deg) rotateZ(90deg);
-  }
-  50% {
-    transform: rotateY(-180deg) rotateZ(90deg);
-  }
-  66% {
-    transform: rotateY(-270deg);
-  }
-  83% {
-    transform: rotateZ(90deg) rotateX(90deg);
-  }
+@keyframes rotateCube {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  25% { transform: rotateY(90deg); }
+  50% { transform: rotateY(180deg); }
+  75% { transform: rotateY(270deg); }
+  100% { transform: rotateY(360deg); }
 }
 
 .box {
   position: absolute;
   width: 260px;
   height: 260px;
-  border: 2px solid #262626;
-}
-
-#box-front {
-  transform: translateX(-130px) translateY(-130px) translateZ(130px);
-  background-image: url("../img/c1.jpg");
   background-size: cover;
   background-position: center;
-  /* filter: grayscale(100%); */
+  border: 2px solid #222;
 }
 
-#box-back {
-  transform: translateX(-130px) translateY(-130px) translateZ(-130px);
-  background-image: url("../img/group.jpg");
-  background-size: cover;
-  background-position: center;
-  /* filter: grayscale(100%); */
-}
-
-#box-right {
-  transform: translateY(-130px) rotateY(90deg);
-  background-image: url("../img/c3.jpeg");
-  background-size: cover;
-  background-position: center;
-  /* filter: grayscale(100%); */
-}
-
-#box-left {
-  transform: translateY(-130px) translateX(-260px) rotateY(90deg);
-  background-image: url("../img/c4.jpg");
-  background-size: cover;
-  background-position: center;
-  /* filter: grayscale(100%); */
-}
-
-#box-top {
-  transform: translateX(-130px) translateY(-260px) rotateX(90deg);
-  background-image: url("../img/c5.jpg");
-  background-size: cover;
-  background-position: center;
-  /* filter: grayscale(100%); */
-}
-
-#box-bottom {
-  transform: translateX(-130px) rotateX(90deg);
-  background-image: url("../img/c6.jpg") ;
-  background-size: cover;
-  background-position: center;
-  /* filter: grayscale(100%); */
-}
-
-.box-area {
-  transform: rotateX(90deg) rotateY(90deg);
-}
+#box-front { transform: translateZ(130px); background-image: url("../img/c1.jpg"); }
+#box-back { transform: rotateY(180deg) translateZ(130px); background-image: url("../img/c6.jpg"); }
+#box-right { transform: rotateY(90deg) translateZ(130px); background-image: url("../img/c3.jpeg"); }
+#box-left { transform: rotateY(-90deg) translateZ(130px); background-image: url("../img/cccc.jpg"); }
+#box-top { transform: rotateX(90deg) translateZ(130px); background-image: url("../img/cool.jpg"); }
+#box-bottom { transform: rotateX(-90deg) translateZ(130px); background-image: url("../img/cool.jpg"); }
 
 @media (max-width: 768px) {
-  .wrapper {
-    top: 55%;
-  }
-  .box {
-    width: 160px;
-    height: 160px;
-  }
-
-  #box-front {
-    transform: translateX(-80px) translateY(-80px) translateZ(80px);
-  }
-
-  #box-back {
-    transform: translateX(-80px) translateY(-80px) translateZ(-80px);
-  }
-
-  #box-right {
-    transform: translateY(-80px) rotateY(90deg);
-  }
-
-  #box-left {
-    transform: translateY(-80px) translateX(-160px) rotateY(90deg);
-  }
-
-  #box-top {
-    transform: translateX(-80px) translateY(-160px) rotateX(90deg);
-  }
-
-  #box-bottom {
-    transform: translateX(-80px) rotateX(90deg);
-  }
+  .box-area { width: 160px; height: 160px; }
+  .box { width: 160px; height: 160px; }
+  
+  #box-front { transform: translateZ(80px); }
+  #box-back { transform: rotateY(180deg) translateZ(80px); }
+  #box-right { transform: rotateY(90deg) translateZ(80px); }
+  #box-left { transform: rotateY(-90deg) translateZ(80px); }
+  #box-top { transform: rotateX(90deg) translateZ(80px); }
+  #box-bottom { transform: rotateX(-90deg) translateZ(80px); }
 }
+
 /*-----------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -792,9 +715,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .evpic {
-  width: 90%;
+  width: 50%;
   height: auto;
-  float: right;
+  float: left;
+  
   filter: white; /*IE5+ */
   -webkit-filter: grayscale(1); /*Webkit Nightlies & Chrome Canary */
   -webkit-transition: all 1.8s ease-in-out;
