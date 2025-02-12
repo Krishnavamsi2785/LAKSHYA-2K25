@@ -367,7 +367,7 @@ span {
   border: 2px solid #222;
 }
 
-#box-front { transform: translateZ(130px); background-image: url("../img/c1.jpg"); }
+#box-front { transform: translateZ(130px); background-image: url("../img/princi.jpg"); }
 #box-back { transform: rotateY(180deg) translateZ(130px); background-image: url("../img/c6.jpg"); }
 #box-right { transform: rotateY(90deg) translateZ(130px); background-image: url("../img/c3.jpeg"); }
 #box-left { transform: rotateY(-90deg) translateZ(130px); background-image: url("../img/cccc.jpg"); }
