@@ -368,8 +368,8 @@ span {
 }
 
 #box-front { transform: translateZ(130px); background-image: url("../img/princi.jpg"); }
-#box-back { transform: rotateY(180deg) translateZ(130px); background-image: url("../img/c6.jpg"); }
-#box-right { transform: rotateY(90deg) translateZ(130px); background-image: url("../img/c3.jpeg"); }
+#box-back { transform: rotateY(180deg) translateZ(130px); background-image: url("../img/gggg.jpg"); }
+#box-right { transform: rotateY(90deg) translateZ(130px); background-image: url("../img/vvvvv.jpg"); }
 #box-left { transform: rotateY(-90deg) translateZ(130px); background-image: url("../img/cccc.jpg"); }
 #box-top { transform: rotateX(90deg) translateZ(130px); background-image: url("../img/cool.jpg"); }
 #box-bottom { transform: rotateX(-90deg) translateZ(130px); background-image: url("../img/cool.jpg"); }
